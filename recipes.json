@@ -1,31 +1,31 @@
 {
 	"recipes" : [
 		{
-			"recipeID":"piston"
+			"recipeID":"piston",
 			"recipeArr":["wood","wood","wood",
 						"cobblestone","iron_ingot","cobblestone",
 						"cobblestone","redstone","cobblestone"]
 		}
 		{
-			"recipeID":"lever"
+			"recipeID":"lever",
 			"recipeArr":["blank","stick","blank",
 						"blank","cobblestone","blank",
 						"blank","blank","blank"]
 		}
 		{
-			"recipeID":"iron_axe"
+			"recipeID":"iron_axe",
 			"recipeArr":["blank","iron_ingot","iron_ingot",
 						"blank","stick","iron_ingot",
 						"stick","blank","blank"]
 		}
 		{
-			"recipeID":"tripwire_hook"
+			"recipeID":"tripwire_hook",
 			"recipeArr":["blank","iron_ingot","blank",
 						"blank","stick","blank",
 						"blank","wood","blank"]
 		}
 		{
-			"recipeID":"redstone_torch"
+			"recipeID":"redstone_torch",
 			"recipeArr":["blank","redstone","blank",
 						"blank","stick","blank",
 						"blank","blank","blank"]
