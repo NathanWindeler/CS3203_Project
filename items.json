@@ -1,0 +1,22 @@
+{
+	"items" : [
+		{
+			"itemID":"blank"
+		}
+		{
+			"itemID":"wood"
+		}
+		{
+			"itemID":"stick"
+		}
+		{
+			"itemID":"cobblestone"
+		}
+		{
+			"itemID":"iron_ingot"
+		}
+		{
+			"itemID":"redstone"
+		}
+	]
+}
