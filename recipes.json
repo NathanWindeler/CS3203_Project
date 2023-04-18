@@ -2,7 +2,7 @@
 	"recipes" : [
 		{
 			"recipeID":"piston"
-			"recipeArr":["oak_wood","wood","oak_wood",
+			"recipeArr":["wood","wood","wood",
 						"cobblestone","iron_ingot","cobblestone",
 						"cobblestone","redstone","cobblestone"]
 		}
