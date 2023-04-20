@@ -11,9 +11,11 @@
       <script src="https://accounts.google.com/gsi/client" async defer></script>
       <div id="g_id_onload"
          data-client_id="587784023328-5lodd76g7m6fqirfogm66dra9mr2jote.apps.googleusercontent.com"
-         data-login_uri="https://nathanwindeler.github.io/CS3203_Project/"
+         data-callback="handleCredentialResponse"
          data-auto_prompt="false">
       </div>
+      <!-- https://developers.google.com/identity/gsi/web/reference/html-reference#element_with_class_g_id_signin -->
+      <!-- data-login_uri="https://nathanwindeler.github.io/CS3203_Project/" -->
       <div class="g_id_signin"
          data-type="standard"
          data-size="large"
@@ -23,6 +25,28 @@
          data-logo_alignment="left">
       </div>
   </body>
+
+
+  <!-- Maaaaan idk what the fuck I'm doin https://developers.google.com/identity/gsi/web/guides/handle-credential-responses-js-functions-->
+<div id="g_id_onload"
+    data-client_id="587784023328-5lodd76g7m6fqirfogm66dra9mr2jote.apps.googleusercontent.com"
+    data-callback="handleCredentialResponse">
+</div>
+<script>
+    function handleCredentialResponse(response) {
+        // decodeJwtResponse() is a custom function defined by you
+        // to decode the credential response.
+        const responsePayload = decodeJwtResponse(response.credential);
+
+        console.log("ID: " + responsePayload.sub);
+        console.log('Full Name: ' + responsePayload.name);
+        console.log('Given Name: ' + responsePayload.given_name);
+        console.log('Family Name: ' + responsePayload.family_name);
+        console.log("Image URL: " + responsePayload.picture);
+        console.log("Email: " + responsePayload.email);
+    }
+</script>
+
 </html>
 
 
