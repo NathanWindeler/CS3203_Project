@@ -3,16 +3,19 @@
 <!-- https://stackoverflow.com/questions/42237388/syntaxerror-import-declarations-may-only-appear-at-top-level-of-a-module -->
 <!-- <script type="module" src="./code.js"></script> -->
 
-<style src="styles.css"></style>
-
-<p> This is a web page. </p>
-
-<p> It should be hosted on github pages. </p>
-
-<button> Hello! I'm a button. </button>
 
 <html>
   <head>
+    <title>CS3203 Project</title>
+    <style src="styles.css"></style>
+    <style>
+      .content {
+        max-width: 500px;
+        margin: auto;
+      }
+    </style>
+    <script src="code.js"></script>
+
     <!-- <script type="module">
       import jwt from 'jsonwebtoken';
       
@@ -35,7 +38,13 @@
     </script>     -->
   </head>
   <body>
-    <title>CS3203 Project</title>
+    <div class="content">
+
+    <p> This is a web page. </p>
+
+    <p> It should be hosted on github pages. </p>
+
+    <button> Hello! I'm a button. </button>
     <!-- <p>There should be a "Sign in with Google" button here...</p>
       <script src="https://accounts.google.com/gsi/client" async defer></script>
       <div id="g_id_onload"
@@ -57,6 +66,7 @@
       <p>I cant get google to work I give up</p>
       <input type="text" name="Username" placeholder="username">
       <button type="submit">Login</button>
+    </div>
   </body>
 
 
