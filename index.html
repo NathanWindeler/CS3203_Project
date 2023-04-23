@@ -5,6 +5,9 @@
 <button> Hello! I'm a button. </button>
 
 <html>
+  <head>
+    
+  </head>
   <body>
     <title>CS3203 Project</title>
     <p>There should be a "Sign in with Google" button here...</p>
@@ -32,20 +35,6 @@
     data-client_id="587784023328-5lodd76g7m6fqirfogm66dra9mr2jote.apps.googleusercontent.com"
     data-callback="handleCredentialResponse">
 </div>
-<script>
-    function handleCredentialResponse(response) {
-        // decodeJwtResponse() is a custom function defined by you
-        // to decode the credential response.
-        const responsePayload = decodeJwtResponse(response.credential);
-
-        console.log("ID: " + responsePayload.sub);
-        console.log('Full Name: ' + responsePayload.name);
-        console.log('Given Name: ' + responsePayload.given_name);
-        console.log('Family Name: ' + responsePayload.family_name);
-        console.log("Image URL: " + responsePayload.picture);
-        console.log("Email: " + responsePayload.email);
-    }
-</script>
 
 </html>
 
