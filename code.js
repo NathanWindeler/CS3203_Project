@@ -1,5 +1,4 @@
 import * as jose from 'jose'
-// https://betterprogramming.pub/jwt-ultimate-how-to-guide-with-best-practices-in-javascript-f7ba4c48dfbd
 import jwt from 'jsonwebtoken';
 
 // const publicKey = '';
@@ -27,7 +26,7 @@ import jwt from 'jsonwebtoken';
 //https://googleapis.dev/python/google-auth/1.11.3/reference/google.auth.jwt.html
 
 // https://stackoverflow.com/questions/72546348/google-sign-in-decoding-jwt-response
-import jwt from "jsonwebtoken";
+
 
 var lastResponse;
 
