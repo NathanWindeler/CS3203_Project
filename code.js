@@ -30,8 +30,31 @@ function loadClicks(){
 }
 
 // LOAD ITEM BUTTONS
-var buttonsDiv = document.getElementById("buttonsDiv");
-fetch('./items.json')
+function createButtons(){
+    // const response = await fetch("items.json");
+    // const jsonData = await response.json();
+    // console.log(jsonData)
 
+    // var items = JSON.parse()
+
+    // TODO: GET JSON WORKING
+    var buttonsDiv = document.getElementById("buttonsDiv");
+    itemsArray = ["redstone", "iron_ingot", "stick", "cobblestone", "wood", "blank"];
+    for (i=0; i<itemsArray.length; i++){
+        newButton = document.createElement("button");
+        newImage = document.createElement("img");
+        newImage.src = "images/" + itemsArray[i];
+        newImage.width = "64";
+        newImage.height = "64";
+
+        newButton.appendChild(newImage);
+        buttonsDiv.appendChild(newButton);
+    }
+
+}
+
+window.onload = function(){
+    createButtons();
+}
 
 console.log("Hello! code.js loaded!");
