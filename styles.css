@@ -2,3 +2,9 @@
   max-width: 500px;
   margin: auto;
 }
+
+.craftingAreaDiv {
+  display: grid;
+  grid-template-rows: 64px 64px 64px;
+  grid-template-columns: 64px 64px 64px;
+}

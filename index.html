@@ -7,35 +7,9 @@
 <html>
   <head>
     <title>CS3203 Project</title>
-    <style src="styles.css"></style>
-    <style>
-      .content {
-        max-width: 500px;
-        margin: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" type="text/css">
     <script src="code.js"></script>
 
-    <!-- <script type="module">
-      import jwt from 'jsonwebtoken';
-      
-      function decodeJwtResponse(cred) {
-        return jwt.decode(cred)
-      }
-
-      function handleCredentialResponse(response) {
-         // decodeJwtResponse() is a custom function defined by you
-         // to decode the credential response.
-         const responsePayload = decodeJwtResponse(response.credential);
-    
-         console.log("ID: " + responsePayload.sub);
-         console.log('Full Name: ' + responsePayload.name);
-         console.log('Given Name: ' + responsePayload.given_name);
-         console.log('Family Name: ' + responsePayload.family_name);
-         console.log("Image URL: " + responsePayload.picture);
-         console.log("Email: " + responsePayload.email);
-      }
-    </script>     -->
   </head>
   <body>
     <div class="content">
@@ -45,23 +19,6 @@
     <p> It should be hosted on github pages. </p>
 
     <button> Hello! I'm a button. </button>
-    <!-- <p>There should be a "Sign in with Google" button here...</p>
-      <script src="https://accounts.google.com/gsi/client" async defer></script>
-      <div id="g_id_onload"
-         data-client_id="587784023328-5lodd76g7m6fqirfogm66dra9mr2jote.apps.googleusercontent.com"
-         data-callback="handleCredentialResponse"
-         data-auto_prompt="false">
-      </div>
-      https://developers.google.com/identity/gsi/web/reference/html-reference#element_with_class_g_id_signin -->
-      <!-- data-login_uri="https://nathanwindeler.github.io/CS3203_Project/" -->
-      <!-- <div class="g_id_signin"
-         data-type="standard"
-         data-size="large"
-         data-theme="outline"
-         data-text="sign_in_with"
-         data-shape="rectangular"
-         data-logo_alignment="left">
-      </div> -->
 
       <p>I cant get google to work I give up</p>
       <input type="text" name="Username" placeholder="username">
@@ -72,6 +29,23 @@
         <button onclick="updateClicks()"> Click me! </button>
         <p id="clickCounter"> Times clicked: 0</p>
         <button onclick="loadClicks()"> Load Clicks </button>
+      </div>
+
+      <div id="gameDiv">
+        <div id="buttonsDiv">
+          <!-- Javascript should automatically put buttons here -->
+        </div>
+        <div class="craftingAreaDiv">
+          <img id="crafting1" src="images/blank.png" width="64" height="64">
+          <img id="crafting2" src="images/blank.png" width="64" height="64">
+          <img id="crafting3" src="images/blank.png" width="64" height="64">
+          <img id="crafting4" src="images/blank.png" width="64" height="64">
+          <img id="crafting5" src="images/blank.png" width="64" height="64">
+          <img id="crafting6" src="images/blank.png" width="64" height="64">
+          <img id="crafting7" src="images/blank.png" width="64" height="64">
+          <img id="crafting8" src="images/blank.png" width="64" height="64">
+          <img id="crafting9" src="images/blank.png" width="64" height="64">
+        </div>
       </div>
 
     </div>
