@@ -43,9 +43,9 @@ function createButtons(){
     for (i=0; i<itemsArray.length; i++){
         newButton = document.createElement("button");
         newImage = document.createElement("img");
-        newImage.src = "images/" + itemsArray[i];
-        newImage.width = "64";
-        newImage.height = "64";
+        newImage.src = "images/" + itemsArray[i] + ".png";
+        newImage.width = "32";
+        newImage.height = "32";
 
         newButton.appendChild(newImage);
         buttonsDiv.appendChild(newButton);

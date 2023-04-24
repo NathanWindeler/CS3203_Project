@@ -3,7 +3,7 @@
   margin: auto;
 }
 
-.craftingAreaDiv {
+.game-board {
   display: grid;
   grid-template-rows: 64px 64px 64px;
   grid-template-columns: 64px 64px 64px;
