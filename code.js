@@ -48,6 +48,7 @@ function checkCookie() {
       username = prompt("Please enter your name:", "");
       if (username != "" && username != null) {
         setCookie("username", username, 365);
+        document.getElementById("logged-in-as").textContent = "Logged in as: " + username;
       }
     }
   }
@@ -77,6 +78,7 @@ function setCookie(cname, cvalue, exdays) {
 
 function logout(){
     setCookie("username", "", 365);
+    document.getElementById("logged-in-as").textContent = "Logged in as: anonymous";
 }
 
 // LOAD ITEM BUTTONS
