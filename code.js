@@ -1,32 +1,41 @@
 // https://www.w3schools.com/js/js_cookies.asp
 
-let numClicks = 0;
+let score = 0;
+var gameWon = false;
 
-function loadClicks(){
+
+function loadScore(){
     let num = document.cookie
     if (num != ""){
-        numClicks = num;
-        updateClicksText();
+        score = num;
+        updateScoreText();
     }
 }
 
-
-function updateClicks(){
-    numClicks++;
-    updateClicksText();
-    saveClicks();
+function updateScore(){
+    score = score + 2;
+    updateScoreText();
+    saveScore();
 }
 
-function updateClicksText(){
-    document.getElementById("clickCounter").textContent = ` Times clicked: ${numClicks}`;
+function updateScoreText(){
+    document.getElementById("clickCounter").textContent = ` Score: ${score}`;
 }
 
-function saveClicks(){
-    document.cookie = numClicks;
+function saveScore(){
+    document.cookie = score;
 }
 
-function loadClicks(){
-    numClicks = document.cookie;
+function loadScore(){
+    score = document.cookie;
+}
+
+function resetScore(){
+    if(confirm("Are you sure you want to reset your score to 0?")){
+        score = 0;
+        saveScore();
+        updateScoreText();
+    }
 }
 
 // LOAD ITEM BUTTONS
@@ -90,19 +99,26 @@ function recipeContains(item){
     return false;
 }
 
+var output = document.getElementById("output");
+
 function guess(element){
     console.log(element);
     console.log(element.target.id)
     
     item = element.target.id;
 
+    if(gameWon){return};
     if(recipeContains(item)){
         // Correct Guess
         console.log("Correct guess!")
+        output.textContent = item + " is in the recipe!"
         revealItem(item);
         checkWin();
     } else {
         // Incorrect guess
+        output.textContent = item + " is not in the recipe..."
+        score = score - 1;
+        updateScoreText();
     }
 }
 
@@ -125,14 +141,17 @@ function arraysEqual(ray1, ray2){
 }
 
 function checkWin(){
-    if(arraysEqual(revealedArray, chosenRecipe.recipeArr)){
-        console.log(`The recipe is: ${chosenRecipe.recipeID}! You win!`)
+    if(arraysEqual(revealedArray, chosenRecipe.recipeArr) && !gameWon){
+        output.textContent = (`The recipe is: ${chosenRecipe.recipeID}! You win!`)
+        gameWon = true;
+        updateScore();
     }
 }
 
 function reset(){
     // Blank crafting arrays
     revealedArray = ["blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank"]
+    gameWon = false;
     for(i = 0; i < 9; i++){
         document.getElementById("crafting" + i).src = `images/blank.png`;
     }
@@ -144,6 +163,8 @@ function reset(){
 window.onload = function(){
     createButtons();
     loadRecipes();
+    loadScore();
+    updateScoreText();
 }
 
 console.log("Hello! code.js loaded!");

@@ -4,64 +4,67 @@
 <!-- <script type="module" src="./code.js"></script> -->
 
 
-<html>
+<html data-bs-theme="dark">
   <head>
     <title>CS3203 Project</title>
     <link rel="stylesheet" href="styles.css" type="text/css">
-    <script src="code.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
   </head>
   <body>
     <div class="content">
 
-    <p> This is a web page. </p>
+    <p> This is a web page hosted on github pages. </p>
 
-    <p> It should be hosted on github pages. </p>
+    <h1>LOGO HERE</h1>
 
-    <button> Hello! I'm a button. </button>
+    <!-- <p> It should be hosted on github pages. </p> -->
 
-      <p>I cant get google to work I give up</p>
-      <input type="text" name="Username" placeholder="username">
+    <!-- <button> Hello! I'm a button. </button> -->
+
+      <!-- <p>I cant get google to work I give up</p> -->
+      <input type="text" name="Username" placeholder="Username">
       <button type="submit">Login</button>
 
       <br> <br>
+      <div id="scorePanel">
+        <!-- <button onclick="updateClicks()"> Click me! </button> -->
+        <p id="clickCounter"> Score: 0</p>
+        <button onclick="loadScore()"> Load Score </button>
+        <button onclick="resetScore()"> Reset Score </button>
+        <button onclick="reset()">Reset Game</button>
+        <h5 id="output">Welcome!</h5>
+      </div>
+
       <div>
-        <button onclick="updateClicks()"> Click me! </button>
-        <p id="clickCounter"> Times clicked: 0</p>
-        <button onclick="loadClicks()"> Load Clicks </button>
-      </div>
-
-      <div id="gameDiv">
-        <div id="left-half">
-          <button onclick="reset()">Reset Game</button>
-          <div class="game-board">
-            <img id="crafting0" src="images/blank.png" width="64" height="64">
-            <img id="crafting1" src="images/blank.png" width="64" height="64">
-            <img id="crafting2" src="images/blank.png" width="64" height="64">
-            <img id="crafting3" src="images/blank.png" width="64" height="64">
-            <img id="crafting4" src="images/blank.png" width="64" height="64">
-            <img id="crafting5" src="images/blank.png" width="64" height="64">
-            <img id="crafting6" src="images/blank.png" width="64" height="64">
-            <img id="crafting7" src="images/blank.png" width="64" height="64">
-            <img id="crafting8" src="images/blank.png" width="64" height="64">
+        <div id="gameDiv" class="flex-container">
+          <div id="left-half" class="boxlayout bg-secondary">
+            <div class="game-board">
+              <img id="crafting0" src="images/blank.png" width="64" height="64">
+              <img id="crafting1" src="images/blank.png" width="64" height="64">
+              <img id="crafting2" src="images/blank.png" width="64" height="64">
+              <img id="crafting3" src="images/blank.png" width="64" height="64">
+              <img id="crafting4" src="images/blank.png" width="64" height="64">
+              <img id="crafting5" src="images/blank.png" width="64" height="64">
+              <img id="crafting6" src="images/blank.png" width="64" height="64">
+              <img id="crafting7" src="images/blank.png" width="64" height="64">
+              <img id="crafting8" src="images/blank.png" width="64" height="64">
+            </div>
           </div>
-          <div class="game-board" id="buttonsDiv">
-            <!-- Javascript should automatically put buttons here -->
+          <div id="right-half" class="boxlayout bg-secondary">
+            <div class="game-board" id="buttonsDiv">
+              <!-- Javascript should automatically put buttons here -->
+            </div>
           </div>
         </div>
-        <div id="right-half">
-
-        </div>
       </div>
+
+      <p id="instructions">It's like hangman, but with Minecraft recipes! The glass pane is a blank space. <br> You get +2 score for getting the recipe completed but lose 1 score for each wrong guess.</p>
 
     </div>
   </body>
-
-
-  <!-- Maaaaan idk what the fuck I'm doin https://developers.google.com/identity/gsi/web/guides/handle-credential-responses-js-functions-->
-<div id="g_id_onload"
-    data-client_id="587784023328-5lodd76g7m6fqirfogm66dra9mr2jote.apps.googleusercontent.com"
-    data-callback="handleCredentialResponse">
-</div>
-
+  
+  <script src="code.js"></script>
 </html>
