@@ -1,5 +1,3 @@
 # CS3203_Project
 
-Readme file
-
-<p> test <\p>
+https://nathanwindeler.github.io/CS3203_Project/
