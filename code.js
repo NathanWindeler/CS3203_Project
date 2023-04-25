@@ -75,6 +75,10 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
 
+function logout(){
+    setCookie("username", "", 365);
+}
+
 // LOAD ITEM BUTTONS
 function createButtons(){
     // const response = await fetch("items.json");
