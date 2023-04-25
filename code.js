@@ -50,7 +50,7 @@ function checkCookie() {
         setCookie("username", username, 365);
       }
     }
-    document.getElementById("logged-in-as").textContent = "Logged in as: " + username;
+    // document.getElementById("logged-in-as").textContent = "Logged in as: " + username;
   }
 
 function getCookie(cname) {
@@ -208,7 +208,7 @@ window.onload = function(){
     loadRecipes();
     loadScore();
     updateScoreText();
-    checkCookie();
+    // checkCookie();
 }
 
 console.log("Hello! code.js loaded!");
