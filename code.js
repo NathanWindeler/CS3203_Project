@@ -130,7 +130,7 @@ async function loadRecipes(){
 }
 
 function chooseRecipe(){
-    chosenRecipe = recipesArray.recipes[Math.floor(Math.random() * 5)]
+    chosenRecipe = recipesArray.recipes[Math.floor(Math.random() * recipesArray.recipes.length)]
 }
 
 function recipeContains(item){
