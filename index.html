@@ -32,19 +32,25 @@
       </div>
 
       <div id="gameDiv">
-        <div class="game-board">
-          <img id="crafting1" src="images/blank.png" width="64" height="64">
-          <img id="crafting2" src="images/blank.png" width="64" height="64">
-          <img id="crafting3" src="images/blank.png" width="64" height="64">
-          <img id="crafting4" src="images/blank.png" width="64" height="64">
-          <img id="crafting5" src="images/blank.png" width="64" height="64">
-          <img id="crafting6" src="images/blank.png" width="64" height="64">
-          <img id="crafting7" src="images/blank.png" width="64" height="64">
-          <img id="crafting8" src="images/blank.png" width="64" height="64">
-          <img id="crafting9" src="images/blank.png" width="64" height="64">
+        <div id="left-half">
+          <button onclick="reset()">Reset Game</button>
+          <div class="game-board">
+            <img id="crafting0" src="images/blank.png" width="64" height="64">
+            <img id="crafting1" src="images/blank.png" width="64" height="64">
+            <img id="crafting2" src="images/blank.png" width="64" height="64">
+            <img id="crafting3" src="images/blank.png" width="64" height="64">
+            <img id="crafting4" src="images/blank.png" width="64" height="64">
+            <img id="crafting5" src="images/blank.png" width="64" height="64">
+            <img id="crafting6" src="images/blank.png" width="64" height="64">
+            <img id="crafting7" src="images/blank.png" width="64" height="64">
+            <img id="crafting8" src="images/blank.png" width="64" height="64">
+          </div>
+          <div class="game-board" id="buttonsDiv">
+            <!-- Javascript should automatically put buttons here -->
+          </div>
         </div>
-        <div class="game-board" id="buttonsDiv">
-          <!-- Javascript should automatically put buttons here -->
+        <div id="right-half">
+
         </div>
       </div>
 
