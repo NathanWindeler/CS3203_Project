@@ -48,9 +48,9 @@ function checkCookie() {
       username = prompt("Please enter your name:", "");
       if (username != "" && username != null) {
         setCookie("username", username, 365);
-        document.getElementById("logged-in-as").textContent = "Logged in as: " + username;
       }
     }
+    document.getElementById("logged-in-as").textContent = "Logged in as: " + username;
   }
 
 function getCookie(cname) {
