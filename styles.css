@@ -18,8 +18,11 @@
 }
 
 .game-board {
-  border: 5px black;
   display: grid;
   grid-template-rows: 64px 64px 64px;
   grid-template-columns: 64px 64px 64px;
+}
+
+.curveCorners {
+  border-radius: 25px;
 }
