@@ -202,6 +202,7 @@ window.onload = function(){
     loadRecipes();
     loadScore();
     updateScoreText();
+    checkCookie();
 }
 
 console.log("Hello! code.js loaded!");
