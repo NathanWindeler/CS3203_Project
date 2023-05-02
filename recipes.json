@@ -29,6 +29,12 @@
 			"recipeArr":["blank","redstone","blank",
 						"blank","stick","blank",
 						"blank","blank","blank"]
+		},
+		{
+			"recipeID":"compass",
+			"recipeArr":["blank","iron_ingot","blank",
+						"iron_ingot","redstone","iron_ingot",
+						"blank","iron_ingot","blank"]
 		}
 	]
 }
