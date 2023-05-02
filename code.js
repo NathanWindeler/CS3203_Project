@@ -122,7 +122,7 @@ async function loadRecipes(){
     console.log(recipesJson);
     recipesArray = recipesJson;
     
-    for(i = 0; i < recipesArray.recipes.length; i++){
+    for(i = 0; i <= recipesArray.recipes.length; i++){
         console.log(recipesArray.recipes[i]);
     }
 
